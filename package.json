@@ -1,9 +1,13 @@
 {
   "name": "oracle-test",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jacob R. Reed",
+    "email": "jacob.russell.reed@gmail.com"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 8080 --liveReload=false --sourceMap=true",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
