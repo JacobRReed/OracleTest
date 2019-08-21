@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap"); //Google Open Sans font as per instructions
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; //Import default prebuilt theme for material to keep component styling, won't be using the full site wide css
+
+$color-blue-dark: #183968; //As per instructions
+$color-blue-medium: #367cd6; //As per instructions
+$color-blue-light: #4a90e2; //As per instructions
+
+/*Full site styling
+ - Gradient background using instruction colors
+ - full width and height to size component space
+*/
+html {
+  background: rgb(24, 57, 104);
+  background: linear-gradient(
+    0deg,
+    rgba(24, 57, 104, 1) 0%,
+    rgba(74, 144, 226, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif !important; //Set default sitewide font as per instructions
+}

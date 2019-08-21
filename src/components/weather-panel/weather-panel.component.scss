@@ -1,0 +1,94 @@
+@import "../../styles.scss";
+
+input {
+  background-color: $color-blue-light;
+}
+
+::ng-deep .mat-input-wrapper {
+  width: 400px !important;
+}
+
+.locationInput {
+  font-size: 30px;
+  line-height: 32px;
+  color: white !important;
+}
+
+::ng-deep .card {
+  background-color: $color-blue-light;
+}
+.card {
+  background-color: rgba(74, 144, 226, 0.9) !important;
+  border-radius: 20px 20px 25px 25px !important;
+}
+.card-header,
+.card-footer {
+  opacity: 1;
+}
+.currentTemp {
+  font-size: 10em;
+  color: white;
+}
+
+span {
+  font-size: 1.5em;
+  color: $color-blue-dark;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px $color-blue-light inset !important;
+  font-size: 30px !important;
+  line-height: 32px !important;
+  -webkit-text-fill-color: white !important;
+  color: white !important;
+}
+
+.weekly {
+  background-color: white;
+  border-radius: 0 0 25px 25px;
+}
+
+::ng-deep .cdk-text-field-autofilled {
+  font-size: 30px !important;
+  line-height: 32px !important;
+  color: white !important;
+}
+
+::ng-deep mat-select {
+  color: white !important;
+}
+
+.mouseOver {
+  cursor: pointer;
+}
+
+.weatherScale {
+  color: white;
+  font-size: 40px;
+}
+
+.weatherHumidity {
+  color: white;
+}
+
+.weatherVis {
+  color: white;
+  font-size: 27px;
+}
+
+.weeklies {
+  border-right: 1px solid rgba(188, 190, 194, 0.4);
+}
+
+.disabledLoc {
+  color: grey;
+}

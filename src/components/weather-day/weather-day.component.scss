@@ -1,0 +1,25 @@
+@import "../../styles.scss";
+
+.mainTemp {
+  color: $color-blue-dark;
+  font-weight: bolder;
+  font-size: 1.2em;
+  text-shadow: 1px 1px $color-blue-dark;
+}
+
+.minTemp {
+  color: black;
+}
+
+.date {
+  color: grey;
+}
+
+div.content {
+  background-color: white;
+}
+
+.col {
+  padding: 0px !important;
+  margin-left: 10px;
+}

@@ -1,0 +1,101 @@
+<div class="card shadow-lg">
+  <div class="card-title current">
+    <div class="container-fluid">
+      <div
+        class="row"
+        style="margin-left:20px;margin-right:20px;margin-top:20px;"
+      >
+        <form style="width:100%" (keydown.enter)="locationSubmit()">
+          <mat-form-field style="width:80%">
+            <span
+              matPrefix
+              [title]="
+                geolocationEnabled
+                  ? 'Use current location'
+                  : 'Location services are disabled, please check your browser settings.'
+              "
+              [class]="
+                geolocationEnabled
+                  ? 'fa fa-location-arrow mouseOver'
+                  : 'fa fa-location-arrow disabledLoc'
+              "
+              style="margin-right:15px"
+              (click)="useGeolocation()"
+            ></span>
+            <span
+              matPrefix
+              title="Submit Search"
+              class="fa fa-search mouseOver"
+              style="margin-right:15px"
+              (click)="locationSubmit()"
+            ></span>
+            <input
+              matInput
+              class="locationInput"
+              placeholder="Location"
+              [formControl]="locationFormControl"
+            />
+            <mat-error *ngIf="locationFormControl.hasError('required')">
+              Location required. Please enter city name
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width:15%;margin-left:5px;margin-right:5px">
+            <mat-select [(value)]="countryCodeSelected" title="Country Code">
+              <mat-option
+                *ngFor="let code of countryCodes"
+                value="{{ code.code }}"
+                [title]="code.name"
+                >{{ code.code }}</mat-option
+              >
+            </mat-select>
+            <span
+              matSuffix
+              title="Clear Search"
+              class="fa fa-times mouseOver"
+              style="margin-left:15px"
+              (click)="resetLocation()"
+            ></span>
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row" *ngIf="this.currentWeather">
+        <div
+          class="span6"
+          class="currentTemp"
+          style="float:none; margin: 0 auto;margin-right:0;  margin-left:0.5em;"
+        >
+          {{ currentWeather.temperature | number: "1.0-0" }}&#730;
+        </div>
+        <div
+          class="span4"
+          style="float:right; margin: 0 auto;margin-left:1em; padding-top:3em"
+        >
+          <div class="row weatherScale">F</div>
+
+          <div class="row weatherVis">{{ currentWeather.visibility }}</div>
+          <div class="row weatherHumidity">
+            {{ currentWeather.humidity }}% Humidity
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div
+      [class]="
+        weeklyWeather && weeklyWeather.length > 0
+          ? 'card-body row weekly'
+          : 'card-body row'
+      "
+    >
+      <div
+        *ngFor="let day of weeklyWeather; let i = index"
+        [class]="i < 4 ? 'col weeklies' : 'col'"
+      >
+        <app-weather-day [day]="day"></app-weather-day>
+      </div>
+    </div>
+  </div>
+</div>

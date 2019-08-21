@@ -1,0 +1,18 @@
+<div class="content row text-center">
+  <div class="col">
+    <div class="date">
+      {{ day.date | date: "MMM d" }}
+    </div>
+
+    <div>
+      <img [src]="day.image" />
+    </div>
+    <div class="mainTemp">
+      {{ day.temperature | number: "1.0-0" }}
+    </div>
+    <div class="minTemp">
+      {{ day.lowTemp | number: "1.0-0"  }}
+    </div>
+
+  </div>
+</div>

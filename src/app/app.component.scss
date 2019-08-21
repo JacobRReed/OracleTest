@@ -1,0 +1,70 @@
+@import "../styles.scss";
+/*
+Center on screen according to height/width of screen
+Adjusts with screen resize
+*/
+.center-div {
+  position: absolute;
+  margin: auto;
+  top: 20%;
+  right: 0;
+  left: 0;
+  width: 33%;
+  height: 30%;
+  border-radius: 3px;
+}
+
+// CLOUD ONE
+.cloudOne {
+  position: absolute;
+  left: 25%;
+  top: 40%;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+// CLOUD TWO
+.cloudTwo {
+  position: absolute;
+  right: 30%;
+  top: 30%;
+}
+
+.floatingTwo {
+  animation-name: floatingTwo;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floatingTwo {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(15px, 0px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
