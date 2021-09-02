@@ -1,6 +1,6 @@
 # OracleTest
 
- - Simple weather app written in Angular 8 for Oracle developer test
+ - Simple weather app written in Angular 8 for an interview I had before I started working at Oracle
  - Added some additional features:
     - You can enter `Manchester,NH` or just `Manchester`. It will ignore whitespace, and will find city based on api return, but use state code for accuracy.
     - You can get weather info based on your geolocation (this only works if geolocation is turned on, or you approve the prompt first time you navigate to the site, if you decline permissions you must change the settings for the specific site in your browser settings, or open an incognito tab **this is by design as you can never request a user's permission again after they decline it**. If you decline, or already declined the feature will be disabled and the button will not be clickable
