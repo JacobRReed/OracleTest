@@ -16,5 +16,3 @@
   3. Open web browser and navigate to `http://localhost:8080`
       - if you want to change the port, you can do so in package.json 
       - if you want to build for prod and use via a server with NodeJS, `npm run build-prod`, copy contents of `dist/OracleTest` folder to server under folder `oracle-test`
-
-**If you read this, I look forward to working with you :)**
